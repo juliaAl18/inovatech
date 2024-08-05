@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #000000;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.nav {
+  flex-grow: 1;
+  font-family: "Pathway Gothic One", sans-serif;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+}
+
+.nav .menu-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav .dropdown .arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 8px;
+  vertical-align: middle;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #ffffff;
+}
+
+.nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000000;
+  border: 1px solid #2bf1ef;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 200px;
+  z-index: 1000;
+}
+
+.nav .dropdown-menu li {
+  padding: 10px;
+}
+
+.nav .dropdown-menu li a {
+  text-decoration: none;
+  color: #fff8f8;
+}
+
+.whatsapp {
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  color: #ffffff;
+  padding: 10px 50px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
+
+.whatsapp-icon {
+  height: 30px;
+  margin-right: 12px;
+}
+
+.whatsapp-text {
+  display: inline;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.968);
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: height 0.4s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.sidebar ul li {
+  padding: 15px 0;
+  position: relative;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.sidebar.show {
+  height: 100vh;
+}
+
+.sidebar .sidebar-dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #000000;
+  border: 1px solid #2bf1ef;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 200px;
+}
+
+.sidebar ul li:hover .sidebar-dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+    font-family: "Pathway Gothic One", sans-serif;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .whatsapp-button {
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+  }
+}

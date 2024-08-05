@@ -1,0 +1,56 @@
+<header class="header">
+    <div class="logo">
+        <img src="assets/inovatech-logo.jpeg" alt="Logo">
+    </div>
+
+    <div class="menu-toggle" (click)="toggleSidebar()">
+        &#9776;
+    </div>
+
+    <nav class="nav">
+        <ul>
+            <li class="menu-item">Home</li>
+            <li class="menu-item">Quem Somos</li>
+            <li class="menu-item dropdown">
+                Assistência Técnica
+                <span class="arrow-down"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">macOS (Apple)</a></li>
+                    <li><a href="#">Linux</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">iOS (Apple)</a></li>
+                </ul>
+            </li>
+            <li class="menu-item dropdown">
+                Aparelhos
+                <span class="arrow-down"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Xiaomi</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">Dell</a></li>
+                    <li><a href="#">Lenovo</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="whatsapp">
+        <a href="https://wa.me/your-whatsapp-number" target="_blank" class="whatsapp-button">
+            <img src="assets/icone-whats.png" alt="WhatsApp" class="whatsapp-icon">
+            <span class="whatsapp-text">Fale conosco</span>
+        </a>
+    </div>
+
+    <div class="sidebar" [class.show]="isSidebarOpen">
+        <div class="close-btn" (click)="closeSidebar()">&times;</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Quem Somos</a></li>
+            <li><a href="#">Assistência Técnica</a></li>
+            <li><a href="#">Aparelhos</a></li>
+        </ul>
+    </div>
+</header>

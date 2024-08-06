@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CarouselComponent } from './modules/home/carousel/carousel.component';
 import { StoreComponent } from './modules/home/store/store.component';
+import { ProductsComponent } from './modules/home/products/products.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { StoreComponent } from './modules/home/store/store.component';
     HeaderComponent,
     CarouselComponent,
     StoreComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

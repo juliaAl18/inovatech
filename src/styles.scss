@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
 
+ :host {
+    display: block;
+     /* Ajuste o valor conforme necessário */
+  }
 body, html {
     margin: 0;
     height: 100%;
     width: 100%;
+    margin-bottom: 100px;
     font-family: "Pathway Gothic One", sans-serif;
   }
+
+ 
   

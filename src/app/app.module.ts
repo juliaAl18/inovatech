@@ -18,6 +18,7 @@ import { FooterComponent } from './modules/footer/footer.component';
 import { ProductsComponent } from './modules/home/products/products.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CommonModule } from '@angular/common';
+import { WhyChooseUsComponent } from './modules/home/why-choose-us/why-choose-us.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CommonModule } from '@angular/common';
     StoreComponent,
     ProductsComponent,
     MapsComponent,
-    FooterComponent
+    FooterComponent,
+    WhyChooseUsComponent
   ],
   imports: [
     BrowserModule,

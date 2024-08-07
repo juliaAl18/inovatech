@@ -27,7 +27,6 @@ export class FeedRssComponent implements OnInit {
   }
 
   moveLeft(): void {
-    console.log(this.feed.nativeElement.offsetWidth);
     this.feed.nativeElement.scrollLeft -= this.feed.nativeElement.offsetWidth;
   }
 

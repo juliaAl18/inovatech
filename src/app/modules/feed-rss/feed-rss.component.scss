@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feed {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.buttons {
+    width: 100%;
+    text-align: center;
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}

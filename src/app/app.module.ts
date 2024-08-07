@@ -15,6 +15,7 @@ import { CarouselComponent } from './modules/home/carousel/carousel.component';
 import { StoreComponent } from './modules/home/store/store.component';
 import { CardComponent } from './components/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FeedRssComponent } from './modules/feed-rss/feed-rss.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     CarouselComponent,
     StoreComponent,
     CardComponent,
+    FeedRssComponent,
   ],
   imports: [
     BrowserModule,

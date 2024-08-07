@@ -1,3 +1,3 @@
 export const environment = {
-    apiInovatech: 'https://inovatech-backend.vercel.app/' 
+    apiInovatech: 'https://inovatech-backend.vercel.app' 
 }

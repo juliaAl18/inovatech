@@ -16,6 +16,8 @@ import { StoreComponent } from './modules/home/store/store.component';
 import { MapsComponent } from './modules/home/maps/maps.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { ProductsComponent } from './modules/home/products/products.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ProductsComponent } from './modules/home/products/products.component';
     CarouselComponent,
     StoreComponent,
     ProductsComponent,
+    MapsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import { ProductsComponent } from './modules/home/products/products.component';
     MatListModule,
     MatButtonModule,
     MatSidenavModule,
-
+    GoogleMapsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

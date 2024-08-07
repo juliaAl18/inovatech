@@ -15,6 +15,8 @@ const routes: Routes = [
   { path: 'carousel', component: CarouselComponent },
   { path: 'store', component: StoreComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'maps', component: MapsComponent },
 ];
 
 @NgModule({

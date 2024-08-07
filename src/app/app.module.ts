@@ -14,8 +14,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { CarouselComponent } from './modules/home/carousel/carousel.component';
 import { StoreComponent } from './modules/home/store/store.component';
 import { MapsComponent } from './modules/home/maps/maps.component';
-import { GoogleMapsModule } from '@angular/google-maps';
 import { FooterComponent } from './modules/footer/footer.component';
+import { ProductsComponent } from './modules/home/products/products.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,7 @@ import { FooterComponent } from './modules/footer/footer.component';
     HeaderComponent,
     CarouselComponent,
     StoreComponent,
-    MapsComponent,
-    FooterComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,7 @@ import { FooterComponent } from './modules/footer/footer.component';
     MatListModule,
     MatButtonModule,
     MatSidenavModule,
-    GoogleMapsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

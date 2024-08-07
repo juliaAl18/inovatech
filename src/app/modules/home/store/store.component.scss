@@ -1,271 +1,213 @@
-@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
 :host {
   display: block;
-  background-color: #000000;
-  color: #ffffff;
-  height: 100vh;
   width: 100%;
+  height: 100%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 0 10%;
+  background-color: #000000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.sub {
+  padding: 50px 20px;
+  width: 150%;
+  text-align: center;
+  color: #fff;
+}
+
+.sub-content {
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+  filter: brightness(1.4);
 }
 
 .search-button-container {
-  margin-bottom: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.search-link {
+  text-decoration: none;
 }
 
 .search-button {
+  background: linear-gradient(135deg, #428887, #2bf1ef);
+  color: black;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 70px;
+  font-size: 30px;
   display: flex;
   align-items: center;
-  background-color: #000000;
-  color: #ffffff;
-  padding: 10px 70px;
-  border: none;
-  border: 3px solid #2bf1ef;
-  border-radius: 20px;
   cursor: pointer;
-  font-size: 30px;
-  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
 }
 
-.company-name {
-  margin-right: 15px;
+.search-button:hover {
+  background: linear-gradient(135deg, #2bf1ef, #428887);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 .search-icon {
-  margin-right: 30px;
+  margin-right: 12px;
+  font-size: 1.6rem;
 }
 
-.search-icon i {
-  font-size: 24px;
+.company-name {
+  font-weight: bold;
 }
 
-.content-section {
+.content {
+  width: 100%;
+  max-width: 2500px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+.timeline-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  position: relative;
+  margin: 20px 0;
 }
 
-.text-section {
-  flex: 1;
-  max-width: 50%;
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
-.text-section h1 {
-  font-size: 70px;
-  margin-bottom: 150px;
-  font-family: "Pathway Gothic One", sans-serif;
+.timeline-text,
+.timeline-image {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
 
-.text-section p {
+.timeline-text h1,
+.timeline-text h2 {
+  color: #2bf1ef;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.timeline-text h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.timeline-text h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.timeline-text p {
   font-size: 24px;
-  line-height: 1.6;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 1.2;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
 }
 
-.logo-section {
-  flex: 1;
-  max-width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-section img {
-  max-width: 100%;
+.timeline-image img {
+  width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
-.search-link {
-    text-decoration: none;
+@media (max-width: 1024px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
   }
 
-@media (max-width: 1440px) {
-  .search-button {
-    padding: 10px 40px;
-    font-size: 24px;
-    border: 2px solid #2bf1ef;
-  }
-
-  .company-name {
-    margin-right: 10px;
-  }
-
-  .search-icon {
-    margin-right: 15px;
-  }
-
-  .text-section {
-    text-align: center;
-    max-width: 90%;
-    padding: 0 10px;
-  }
-
-  .text-section h1 {
-    font-size: 50px;
-    margin-bottom: 80px;
-    margin-top: 60px;
-  }
-
-  .text-section p {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .logo-section img {
-    max-width: 90%;
-  }
-
-  :host {
-    display: block;
-    background-color: #000000;
-    color: #ffffff;
-    height: 50vh;
+  .timeline-text,
+  .timeline-image {
     width: 100%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .search-button {
-    padding: 10px 40px;
-    font-size: 24px;
-    border: 2px solid #2bf1ef;
+    margin-bottom: 20px;
   }
 
-  .company-name {
-    margin-right: 10px;
+  .timeline-text h1 {
+    font-size: 1.2rem;
   }
 
-  .search-icon {
-    margin-right: 15px;
+  .timeline-text h2 {
+    font-size: 1rem;
   }
 
-  .text-section {
-    text-align: center;
-    max-width: 90%;
-    padding: 0 10px;
-  }
-
-  .text-section h1 {
-    font-size: 50px;
-    margin-bottom: 80px;
-    margin-top: 60px;
-  }
-
-  .text-section p {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .logo-section img {
-    max-width: 90%;
-  }
-
-  :host {
-    display: block;
-    background-color: #000000;
-    color: #ffffff;
-    height: 70vh;
-    width: 100%;
+  .timeline-text p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .search-button {
-    padding: 10px 40px;
-    font-size: 24px;
-    border: 2px solid #2bf1ef;
+  .logo {
+    width: 150px;
   }
 
-  .company-name {
-    margin-right: 10px;
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .search-icon {
-    margin-right: 15px;
-  }
-
-  .text-section {
-    text-align: center;
-    max-width: 90%;
-    padding: 0 10px;
-  }
-
-  .text-section h1 {
-    font-size: 50px;
-    margin-bottom: 80px;
-    margin-top: 60px;
-  }
-
-  .text-section p {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .logo-section img {
-    max-width: 90%;
-  }
-
-  :host {
-    display: block;
-    background-color: #000000;
-    color: #ffffff;
-    height: 120vh;
+  .timeline-text,
+  .timeline-image {
     width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .search-button {
-    padding: 10px 20px;
-    font-size: 20px;
-    border: 2px solid #2bf1ef;
+    margin-bottom: 20px;
   }
 
-  .company-name {
-    margin-right: 5px;
-  }
-
-  .search-icon {
-    margin-right: 10px;
-  }
-
-  .text-section {
-    text-align: center;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .text-section h1 {
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-
-  .text-section p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .logo-section {
+  .timeline-image {
     display: none;
   }
 
-  :host {
-    display: block;
-    background-color: #000000;
-    color: #ffffff;
-    height: 120vh;
-    width: 100%;
+  .timeline-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-text h2 {
+    font-size: 1rem;
+  }
+
+  .timeline-text p {
+    font-size: 0.8rem;
   }
 }
-

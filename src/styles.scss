@@ -1,16 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
 
- :host {
-    display: block;
-     /* Ajuste o valor conforme necessário */
-  }
-body, html {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    margin-bottom: 100px;
-    font-family: "Pathway Gothic One", sans-serif;
-  }
+:host {
+  display: block;
+  /* Ajuste o valor conforme necessário */
+}
 
- 
-  
+body,
+html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+  font-family: "Pathway Gothic One", sans-serif;
+}
+
+
+/* Configurações do scroll bar globalmente */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3a3a3a;
+  border-radius: 20px;
+}

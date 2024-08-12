@@ -19,6 +19,9 @@ import { ProductsComponent } from './modules/home/products/products.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CommonModule } from '@angular/common';
 import { WhyChooseUsComponent } from './modules/home/why-choose-us/why-choose-us.component';
+import { CardComponent } from './components/card/card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FeedRssComponent } from './modules/feed-rss/feed-rss.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { WhyChooseUsComponent } from './modules/home/why-choose-us/why-choose-us
     ProductsComponent,
     MapsComponent,
     FooterComponent,
-    WhyChooseUsComponent
+    WhyChooseUsComponent,
+    CardComponent,
+    FeedRssComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,8 @@ import { WhyChooseUsComponent } from './modules/home/why-choose-us/why-choose-us
     MatButtonModule,
     MatSidenavModule,
     GoogleMapsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

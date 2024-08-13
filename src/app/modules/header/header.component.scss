@@ -187,6 +187,7 @@
   display: block;
 }
 
+// Mobile
 @media (max-width: 768px) {
   .nav ul {
     display: none;
@@ -201,5 +202,12 @@
     padding: 8px 20px;
     font-size: 16px;
     border-radius: 25px;
+  }
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .whatsapp-button {
+    display: none;
   }
 }

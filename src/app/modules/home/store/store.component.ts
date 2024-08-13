@@ -35,4 +35,5 @@ export class StoreComponent implements AfterViewInit {
       observer.observe(element);
     }
   }
+  
 }

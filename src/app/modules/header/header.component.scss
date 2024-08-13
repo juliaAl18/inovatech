@@ -6,8 +6,9 @@
   align-items: center;
   padding: 10px;
   background-color: #000000;
-  border-bottom: 1px solid #ddd;
-  position: relative;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
 }
 
 .logo img {
@@ -34,6 +35,10 @@
   position: relative;
   padding: 10px 20px;
   cursor: pointer;
+
+  &:hover {
+    color: #2bf1ef;
+  }
 }
 
 .nav .dropdown .arrow-down {
@@ -56,7 +61,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #000000;
+  background-color: rgba(#000000, 0.9);
   border: 1px solid #2bf1ef;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -87,6 +92,7 @@
   background-color: #25d366;
   color: #ffffff;
   padding: 10px 50px;
+  margin-right: 15px;
   border-radius: 40px;
   text-decoration: none;
   font-size: 19px;

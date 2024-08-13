@@ -1,213 +1,142 @@
+// Mobile
 .container {
-  padding: 100px;
-  max-width: 1100px;
-  margin: 0 auto;
-  border-radius: 8px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-header h1 {
-  font-size: 50px;
-  color: #333;
-  font-family: "Pathway Gothic One", sans-serif;
-}
-
-.highlight {
-  color: #2bf1ef;
-}
-
-header p {
-  font-size: 1.2em;
-  color: #666;
-}
-
-.benefits {
+  background-color: #F5F5F5;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-top: 30px;
 }
 
-.benefit-row {
+.title {
   display: flex;
-  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+
+  span {
+    color: #2BF1EF;
+  }
 }
 
-.benefit {
-  flex: 1;
-  position: relative;
-  padding: 20px;
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-  height: 400px;
-  border: 8px solid #2bf1ef;
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lower {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
   text-align: center;
-  font-size: 20px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.benefit-single {
-  position: relative;
+  border: solid 5px #2BF1EF;
+  border-radius: 5px;
+  width: 50%;
   padding: 20px;
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 8px solid #2bf1ef;
-  text-align: center;
-  margin-top: 20px;
-  max-width: 500px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h2 {
+    color: #2BF1EF;
+  }
 }
 
-.benefit-single p {
-  font-size: 25px;
-  line-height: 1.4;
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card {
+    width: 45%;
+    margin-bottom: 20px;
+  }
 }
 
-.icon {
-  position: absolute;
-  top: 20px;
-  right: 0px;
-  font-size: 70px;
-  color: rgb(3, 255, 3);
-}
-
-.compact-paragraph {
-  width: 60%;
-  margin: 0 auto;
-  line-height: 1.4;
-}
-
-.benefit h2,
-.benefit-single h2 {
-  margin-top: 40px;
-  font-size: 40px;
-  color: #2bf1ef;
-  font-family: "Pathway Gothic One", sans-serif;
-}
-
-.benefit p {
-  font-size: 25px;
-  line-height: 1.4;
-}
-
-@media (max-width: 600px) {
+// Desktop
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   .container {
+    align-items: center;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+  }
+  
+  .upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .card {
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
     padding: 20px;
+    margin-bottom: 20px;
+  }  
+}
+
+// Telas grandes
+@media screen and (min-width: 1200px) {
+  .container {
+    align-items: center;
   }
 
-  header h1 {
-    font-size: 30px;
-  }
-
-  header p {
-    font-size: 1em;
-  }
-
-  .benefit-row {
+  .body {
+    display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    width: 45%;
+  }
+  
+  .upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .card {
+    border-radius: 5px;
+    width: 200px;
+    height: 230px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }  
+}
+
+// Animações:
+@keyframes comesFromDown {
+  from {
+      opacity: 0;
+      transition: all 1s;
+      transform: translateY(200%);
   }
 
-  .benefit {
-    font-size: 18px;
-    height: auto;
-  }
-
-  .benefit-single {
-    font-size: 20px;
-    max-width: 100%;
-  }
-
-  .icon {
-    font-size: 50px;
-  }
-
-  .compact-paragraph {
-    width: 100%;
+  to {
+      opacity: 1;
+      transition: all 1s;
+      transform: translateY(0);
   }
 }
 
-@media (max-width: 900px) {
-  .container {
-    padding: 40px;
-  }
-
-  header h1 {
-    font-size: 40px;
-  }
-
-  header p {
-    font-size: 1.1em;
-  }
-
-  .benefit-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .benefit {
-    font-size: 18px;
-    height: auto;
-  }
-
-  .benefit-single {
-    font-size: 22px;
-    max-width: 100%;
-  }
-
-  .icon {
-    font-size: 60px;
-  }
+.comes-from-down {
+  animation: comesFromDown 1s ease-in;
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 10px;
-  }
-
-  header h1 {
-    font-size: 24px;
-  }
-
-  header p {
-    font-size: 0.9em;
-  }
-
-  .benefit-row {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .benefit {
-    font-size: 16px;
-    height: auto;
-    padding: 15px;
-  }
-
-  .benefit-single {
-    font-size: 18px;
-    max-width: 100%;
-    padding: 15px;
-    height: auto;
-  }
-
-  .icon {
-    font-size: 40px;
-    top: 10px;
-  }
-
-  .compact-paragraph {
-    width: 100%;
-    font-size: 16px;
-  }
+.hidden {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0s, transform 0s;
 }

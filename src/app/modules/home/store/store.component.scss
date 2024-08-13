@@ -23,6 +23,18 @@
   }
 }
 
+@keyframes float {
+
+  0%,
+  100% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
 .hidden {
   opacity: 0;
   transform: translateX(0);
@@ -35,6 +47,10 @@
 
 .comes-from-the-right {
   animation: comesFromTheRight 1s ease-in;
+}
+
+img {
+  animation: float 3s ease-in-out infinite;
 }
 
 // Mobile
@@ -107,8 +123,20 @@
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+
     div {
       text-align: start;
+      width: 70%;
+    }
+
+    img {
+      display: block;
+      width: 150px;
+      height: 150px;
     }
   }
 }
@@ -118,7 +146,8 @@
   .text {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 80%;
 
     div {
       text-align: start;

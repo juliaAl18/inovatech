@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
 export interface Aparelho {
@@ -16,7 +16,7 @@ export interface Aparelho {
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit, OnDestroy {
+export class ProductsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   aparelhos: Aparelho[] = [
     {
@@ -67,11 +67,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
       imagens: ['./assets/pocox6-pro.jpeg'],
       cores: ['black', 'yellow', 'white']
     },
-
-
-
   ];
-
 
   selectedColors: { [id: string]: string } = {};
   private hoverSubscriptions: { [id: number]: Subscription } = {};
@@ -80,9 +76,13 @@ export class ProductsComponent implements OnInit, OnDestroy {
   @ViewChild('semiNovosContainer', { static: false }) semiNovosContainer!: ElementRef;
   @ViewChild('notebookContainer', { static: false }) notebookContainer!: ElementRef;
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void { }
+
+  ngAfterViewInit(): void {
+    this.checkScrollButtons();
+  }
 
   ngOnDestroy(): void {
     for (const key in this.hoverSubscriptions) {
@@ -135,7 +135,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     if (container) {
       const currentScroll = container.nativeElement.scrollLeft;
       container.nativeElement.scrollTo({
-        left: currentScroll - 320,
+        left: currentScroll - container.nativeElement.offsetWidth,
         behavior: 'smooth'
       });
     }
@@ -146,7 +146,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
     if (container) {
       const currentScroll = container.nativeElement.scrollLeft;
       container.nativeElement.scrollTo({
-        left: currentScroll + 320,
+        left: currentScroll + container.nativeElement.offsetWidth,
         behavior: 'smooth'
       });
     }
@@ -173,5 +173,28 @@ export class ProductsComponent implements OnInit, OnDestroy {
       Valor: R$ ${aparelho.valor.toFixed(2)}
       Categoria: ${aparelho.categoria}`;
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  }
+
+  private checkScrollButtons() {
+    this.cdr.detectChanges();
+  }
+
+  needButtonInNovosContainer(): boolean {
+    return this.checkButtonVisibility(this.novosContainer);
+  }
+
+  needButtonInSemiNovosContainer(): boolean {
+    return this.checkButtonVisibility(this.semiNovosContainer);
+  }
+
+  needButtonInNotebookContainer(): boolean {
+    return this.checkButtonVisibility(this.notebookContainer);
+  }
+
+  private checkButtonVisibility(container: ElementRef): boolean {
+    if (container && container.nativeElement) {
+      return container.nativeElement.scrollWidth > container.nativeElement.clientWidth;
+    }
+    return false;
   }
 }

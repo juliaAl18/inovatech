@@ -1,92 +1,81 @@
+// Mobile
 .catalog {
-  padding: 20px;
-}
+  width: 100%;
 
-.catalog h1 {
-  font-family: "Pathway Gothic One", sans-serif;
-  font-size: 50px;
-  padding: 70px;
+  h1 {
+    font-family: "Pathway Gothic One", sans-serif;
+    font-size: 50px;
+    padding: 15px 5px 5px 55px;
+  }
 }
 
 .section {
   margin-bottom: 20px;
-}
 
-.section h2 {
-  font-size: 45px;
-  color: #2bf1ef;
-  font-weight: bold;
-  padding: 70px;
-  font-family: "Pathway Gothic One", sans-serif;
+  h2 {
+    font-size: 45px;
+    color: #2bf1ef;
+    font-weight: bold;
+    padding: 5px 5px 5px 55px;
+    font-family: "Pathway Gothic One", sans-serif;
+  }
 }
 
 .aparelho-wrapper {
   display: flex;
   align-items: center;
-  position: relative;
-  padding: 0 80px; 
+  justify-content: space-evenly;
 }
 
 .arrow {
-  background: #2bf1ef;
   border: none;
-  color: white;
-  font-size: 24px;
+  color: #2bf1ef;
+  font-size: 20px;
   cursor: pointer;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2; 
-}
+  background-color: transparent;
 
-.arrow.left {
-  left: 10px;
-}
-
-.arrow.right {
-  right: 10px;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .aparelho-container {
   overflow: hidden;
-  width: calc(
-    100% - 10px
-  ); 
+  width: 70%;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 10px 0 10px;
 }
 
 .aparelho-grid {
   display: flex;
-  gap: 20px;
   transition: transform 0.3s ease;
-  width: max-content;
-  margin: 0 auto; 
 }
 
 .aparelho {
-  border-radius: 8px;
-  overflow: hidden;
-  width: 300px; 
+  width: 240px;
   text-align: center;
   transition: transform 0.2s ease;
-}
+  padding: 10px;
 
-.aparelho:hover {
-  transform: scale(1.02);
+  img {
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 1px 4px #2bf1ef;
+    }
+  }
 }
 
 .image-container {
-  position: relative;
-}
-
-.image-container img {
-  width: 100%;
-  height: 300px; 
-  object-fit: cover;
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 .name {
@@ -115,4 +104,72 @@
   height: 25px;
   border-radius: 50%;
   border: 2px solid #000000;
+}
+
+.more-info {
+  a {
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+      color: #2bf1ef;
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .aparelho {
+    width: 260px;
+  }
+
+  .catalog {
+    h1 {
+      padding: 15px 5px 5px 75px;
+    }
+  }
+  
+  .section {
+    h2 {
+      padding: 5px 5px 5px 75px;
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .aparelho {
+    width: 280px;
+  }
+
+  .catalog {
+    h1 {
+      padding: 15px 5px 5px 95px;
+    }
+  }
+  
+  .section {
+    h2 {
+      padding: 5px 5px 5px 95px;
+    }
+  }
+}
+
+// Telas grandes
+@media screen and (min-width: 1200px) {
+  .aparelho {
+    width: 310px;
+  }
+
+  .catalog {
+    h1 {
+      padding: 15px 5px 5px 115px;
+    }
+  }
+  
+  .section {
+    h2 {
+      padding: 5px 5px 5px 115px;
+    }
+  }
 }

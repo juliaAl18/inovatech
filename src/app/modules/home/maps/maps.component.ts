@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-maps',
   templateUrl: './maps.component.html',
   styleUrls: ['./maps.component.scss']
 })
-export class MapsComponent implements OnInit {
+export class MapsComponent implements OnInit, AfterViewInit {
 
   map!: google.maps.Map;
 
@@ -31,6 +31,13 @@ export class MapsComponent implements OnInit {
   ngOnInit(): void {
     this.initMap();
     this.checkStatus();
+  }
+
+  ngAfterViewInit(): void {
+    this.observeElementAnimation('#left-1', 'comes-from-the-left-1');
+    this.observeElementAnimation('#left-2', 'comes-from-the-left-2');
+    this.observeElementAnimation('#left-3', 'comes-from-the-left-3');
+    this.observeElementAnimation('#left-4', 'comes-from-the-left-4');
   }
 
   initMap(): void {
@@ -83,4 +90,25 @@ export class MapsComponent implements OnInit {
       }
     }
   }
+
+  observeElementAnimation(elementSelector: string, animationClass: string): void {
+    const element = document.querySelector(elementSelector);
+
+    if (element) {
+      // Adiciona a classe "hidden" inicialmente
+      element.classList.add('hidden');
+
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          entries[0].target.classList.remove('hidden');
+          entries[0].target.classList.add(animationClass);
+        }
+      }, {
+        threshold: 0.2
+      });
+
+      observer.observe(element);
+    }
+  }
+
 }

@@ -134,7 +134,7 @@
   from {
       opacity: 0;
       transition: all 1s;
-      transform: translateY(200%);
+      transform: translateY(100%);
   }
 
   to {
@@ -145,7 +145,7 @@
 }
 
 .comes-from-down {
-  animation: comesFromDown 1s ease-in;
+  animation: comesFromDown 0.5s ease-in;
 }
 
 .hidden {

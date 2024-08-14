@@ -48,7 +48,12 @@
   align-items: center;
   overflow: hidden;
   position: relative;
+  overflow-x: auto;
   scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .aparelho-grid {

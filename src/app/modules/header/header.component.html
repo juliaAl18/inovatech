@@ -4,7 +4,9 @@
     </div>
 
     <div class="menu-toggle" (click)="toggleSidebar()">
-        &#9776;
+        <mat-icon>
+            menu
+        </mat-icon>
     </div>
 
     <nav class="nav">
@@ -45,7 +47,9 @@
     </div>
 
     <div class="sidebar" [class.show]="isSidebarOpen">
-        <div class="close-btn" (click)="closeSidebar()">&times;</div>
+        <div class="close-btn" (click)="closeSidebar()">
+            <mat-icon>close</mat-icon>
+        </div>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Quem Somos</a></li>

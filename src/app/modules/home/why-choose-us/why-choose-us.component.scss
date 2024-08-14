@@ -10,10 +10,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 10px 0;
+  margin: 20px 0 20px 0;
 
-  span {
-    color: #2BF1EF;
+  h1 {
+    font-size: 35px;
+
+    span {
+      color: #2BF1EF;
+    }
   }
 }
 

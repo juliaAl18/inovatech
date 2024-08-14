@@ -1,11 +1,12 @@
 // Mobile
 .catalog {
   width: 100%;
+  margin-top: 30px;
 
   h1 {
     font-family: "Pathway Gothic One", sans-serif;
     font-size: 50px;
-    padding: 15px 5px 5px 55px;
+    text-align: center;
   }
 }
 
@@ -13,26 +14,27 @@
   margin-bottom: 20px;
 
   h2 {
+    font-family: "Pathway Gothic One", sans-serif;
     font-size: 45px;
     color: #2bf1ef;
     font-weight: bold;
-    padding: 5px 5px 5px 55px;
-    font-family: "Pathway Gothic One", sans-serif;
+    text-align: center;
   }
 }
 
 .aparelho-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .arrow {
   border: none;
-  color: #2bf1ef;
+  color: #000000;
   font-size: 20px;
   cursor: pointer;
   background-color: transparent;
+  border-radius: 50%;
 
   &:hover {
     transform: scale(1.1);
@@ -40,11 +42,13 @@
 }
 
 .aparelho-container {
-  overflow: hidden;
-  width: 70%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
-  padding: 10px 10px 0 10px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  scroll-behavior: smooth;
 }
 
 .aparelho-grid {
@@ -56,7 +60,7 @@
   width: 240px;
   text-align: center;
   transition: transform 0.2s ease;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 
   img {
     border-radius: 8px;
@@ -117,22 +121,17 @@
   }
 }
 
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .aparelho {
     width: 260px;
-  }
-
-  .catalog {
-    h1 {
-      padding: 15px 5px 5px 75px;
-    }
-  }
-  
-  .section {
-    h2 {
-      padding: 5px 5px 5px 75px;
-    }
   }
 }
 
@@ -141,35 +140,11 @@
   .aparelho {
     width: 280px;
   }
-
-  .catalog {
-    h1 {
-      padding: 15px 5px 5px 95px;
-    }
-  }
-  
-  .section {
-    h2 {
-      padding: 5px 5px 5px 95px;
-    }
-  }
 }
 
 // Telas grandes
 @media screen and (min-width: 1200px) {
   .aparelho {
     width: 310px;
-  }
-
-  .catalog {
-    h1 {
-      padding: 15px 5px 5px 115px;
-    }
-  }
-  
-  .section {
-    h2 {
-      padding: 5px 5px 5px 115px;
-    }
   }
 }

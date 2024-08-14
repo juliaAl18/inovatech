@@ -1,10 +1,11 @@
 .container {
     width: 100%;
     height: auto;
-    padding: 20px 0 20px 0;
+    padding: 40px 0 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F5F5F5;
 }
 
 .title {
@@ -15,7 +16,8 @@
 
     h1 {
         color: #2BF1EF;
-        font-size: 35px;
+        font-size: 45px;
+        font-family: "Pathway Gothic One", sans-serif;
 
         span {
             font-weight: bold;

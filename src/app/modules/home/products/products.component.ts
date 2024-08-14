@@ -21,14 +21,6 @@ export class ProductsComponent implements OnInit, OnDestroy, AfterViewInit {
   aparelhos: Aparelho[] = [
     {
       id: 1,
-      nome: 'iPhone 15 Pro Max 256GB',
-      valor: 7150.00,
-      categoria: 'Novos',
-      imagens: ['./assets/iphone15-pro-max.jpeg'],
-      cores: ['blue', 'orange', 'white', 'black']
-    },
-    {
-      id: 2,
       nome: 'iPhone 15 Pro 256GB',
       valor: 6599.00,
       categoria: 'Novos',
@@ -36,12 +28,20 @@ export class ProductsComponent implements OnInit, OnDestroy, AfterViewInit {
       cores: ['orange']
     },
     {
-      id: 3,
+      id: 2,
       nome: 'iPhone 15 128GB',
       valor: 4699.00,
       categoria: 'Novos',
       imagens: ['./assets/iphone15.jpg', './assets/iphone15-teste2.jpg'],
       cores: ['black', 'orange', 'pink']
+    },
+    {
+      id: 3,
+      nome: 'iPhone 15 Pro Max 256GB',
+      valor: 7150.00,
+      categoria: 'Novos',
+      imagens: ['./assets/iphone15-pro-max.jpeg'],
+      cores: ['blue', 'orange', 'white', 'black']
     },
     {
       id: 4,
@@ -193,7 +193,17 @@ export class ProductsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private checkButtonVisibility(container: ElementRef): boolean {
     if (container && container.nativeElement) {
-      return container.nativeElement.scrollWidth > container.nativeElement.clientWidth;
+      const hasScroll = container.nativeElement.scrollWidth > container.nativeElement.clientWidth;
+      const containerElement = container.nativeElement;
+  
+      // Adiciona ou remove a classe com base na visibilidade do scroll
+      if (hasScroll) {
+        containerElement.style.justifyContent = 'flex-start';
+      } else {
+        containerElement.style.justifyContent = 'center';
+      }
+  
+      return hasScroll;
     }
     return false;
   }

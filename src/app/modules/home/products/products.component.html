@@ -4,7 +4,6 @@
   <div class="section">
     <h2>Novos</h2>
     <div class="aparelho-wrapper">
-      <button *ngIf="needButtonInNovosContainer()" class="arrow" (click)="moveLeft('novos')">❮</button>
       <div class="aparelho-container" #novosContainer>
         <div class="aparelho-grid">
           <div class="aparelho" *ngFor="let aparelho of getAparelhosByCategoria('Novos')"
@@ -30,14 +29,16 @@
           </div>
         </div>
       </div>
-      <button *ngIf="needButtonInNovosContainer()" class="arrow" (click)="moveRight('novos')">❯</button>
+      <div class="buttons">
+        <button *ngIf="needButtonInNovosContainer()" class="arrow" (click)="moveLeft('novos')"> <mat-icon>arrow_back_ios</mat-icon></button>
+        <button *ngIf="needButtonInNovosContainer()" class="arrow" (click)="moveRight('novos')"><mat-icon>arrow_forward_ios</mat-icon></button>
+      </div>
     </div>
   </div>
 
   <div class="section">
     <h2>Semi-novos</h2>
     <div class="aparelho-wrapper">
-      <button *ngIf="needButtonInSemiNovosContainer()" class="arrow" (click)="moveLeft('semi-novos')">❮</button>
       <div class="aparelho-container" #semiNovosContainer>
         <div class="aparelho-grid">
           <div class="aparelho" *ngFor="let aparelho of getAparelhosByCategoria('Semi-novos')"
@@ -63,14 +64,16 @@
           </div>
         </div>
       </div>
-      <button *ngIf="needButtonInSemiNovosContainer()" class="arrow" (click)="moveRight('semi-novos')">❯</button>
+      <div class="buttons">
+        <button *ngIf="needButtonInSemiNovosContainer()" class="arrow" (click)="moveLeft('semi-novos')"> <mat-icon>arrow_back_ios</mat-icon></button>
+        <button *ngIf="needButtonInSemiNovosContainer()" class="arrow" (click)="moveRight('semi-novos')"><mat-icon>arrow_forward_ios</mat-icon></button>
+      </div>
     </div>
   </div>
 
   <!-- <div class="section">
     <h2>Notebook</h2>
     <div class="aparelho-wrapper">
-      <button *ngIf="needButtonInNotebookContainer()" class="arrow" (click)="moveLeft('notebook')">❮</button>
       <div class="aparelho-container" #notebookContainer>
         <div class="aparelho-grid">
           <div class="aparelho" *ngFor="let aparelho of getAparelhosByCategoria('Notebook')"
@@ -96,7 +99,10 @@
           </div>
         </div>
       </div>
-      <button *ngIf="needButtonInNotebookContainer()" class="arrow" (click)="moveRight('notebook')">❯</button>
+      <div class="buttons">
+        <button *ngIf="needButtonInNotebookContainer()" class="arrow" (click)="moveLeft('notebook')"> <mat-icon>arrow_back_ios</mat-icon></button>
+        <button *ngIf="needButtonInNotebookContainer()" class="arrow" (click)="moveRight('notebook')"><mat-icon>arrow_forward_ios</mat-icon></button>
+      </div>
     </div>
   </div> -->
 </div>

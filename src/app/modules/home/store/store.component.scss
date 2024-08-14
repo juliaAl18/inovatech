@@ -21,11 +21,14 @@
     color: #000000;
     text-decoration: none;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 25px;
     transition: 0.5s;
+    font-family: "Pathway Gothic One", sans-serif;
+    display: flex;
+    align-items: center;
 
-    span {
-      margin-right: 3px;
+    mat-icon {
+      padding-right: 5px;
     }
 
     &:hover {
@@ -54,10 +57,14 @@
 
     h2 {
       color: #2BF1EF;
+      font-family: "Pathway Gothic One", sans-serif;
+      font-size: 25px;
     }
 
     p {
       color: #FFF;
+      font-family: "Pathway Gothic One", sans-serif;
+      font-size: 20px;
     }
   }
 

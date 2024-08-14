@@ -43,7 +43,6 @@
 
 .card {
   text-align: center;
-  border: solid 5px #2BF1EF;
   border-radius: 5px;
   width: 50%;
   padding: 20px;
@@ -55,13 +54,31 @@
 
   h2 {
     font-family: "Pathway Gothic One", sans-serif;
-    color: #2BF1EF;
+    color: #000000;
     font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+
+    mat-icon {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+    }
+
+    &:hover {
+      color: #2BF1EF;
+      cursor: default;
+    }
   }
 
   p {
     font-family: "Pathway Gothic One", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 

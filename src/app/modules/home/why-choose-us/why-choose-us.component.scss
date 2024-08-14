@@ -70,15 +70,19 @@
       font-size: 45px;
     }
 
-    &:hover {
-      color: #2BF1EF;
-      cursor: default;
-    }
   }
 
   p {
     font-family: "Pathway Gothic One", sans-serif;
     font-size: 22px;
+  }
+
+  &:hover {
+    cursor: default;
+
+    h2 {
+      color: #2BF1EF;
+    }
   }
 }
 

@@ -8,7 +8,7 @@ import { FeedRssService } from 'src/app/services/feed-rss.service';
   styleUrls: ['./feed-rss.component.scss']
 })
 export class FeedRssComponent implements OnInit {
-  
+
   posts: Post[] = [];
   @ViewChild('feed') feed!: ElementRef;
 
@@ -22,7 +22,7 @@ export class FeedRssComponent implements OnInit {
 
   getPosts(): void {
     this.feedRssService.getPosts().subscribe(response => {
-      this.posts = response
+      this.posts = response;
     });
   }
 

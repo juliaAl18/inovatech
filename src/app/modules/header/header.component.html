@@ -11,29 +11,33 @@
 
     <nav class="nav">
         <ul>
-            <li class="menu-item">Home</li>
-            <li class="menu-item">Quem Somos</li>
+            <li class="menu-item">
+                <a (click)="scrollToSection('home')">Home</a>
+            </li>
+            <li class="menu-item">
+                <a (click)="scrollToSection('store')">Quem Somos</a>
+            </li>
             <li class="menu-item dropdown">
-                Assistência Técnica
+                <a (click)="scrollToSection('why')">Assistência Técnica</a>
                 <span class="arrow-down"></span>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Windows</a></li>
-                    <li><a href="#">macOS (Apple)</a></li>
-                    <li><a href="#">Linux</a></li>
-                    <li><a href="#">Android</a></li>
-                    <li><a href="#">iOS (Apple)</a></li>
+                    <li>Windows</li>
+                    <li>macOS(Apple)</li>
+                    <li>Linux</li>
+                    <li>Android</li>
+                    <li>iOS (Apple)</li>
                 </ul>
             </li>
             <li class="menu-item dropdown">
-                Aparelhos
+                <a (click)="scrollToSection('products')">Aparelhos</a>
                 <span class="arrow-down"></span>
                 <ul class="dropdown-menu">
-                    <li><a href="#">iPhone</a></li>
-                    <li><a href="#">Samsung</a></li>
-                    <li><a href="#">Xiaomi</a></li>
-                    <li><a href="#">Mac</a></li>
-                    <li><a href="#">Dell</a></li>
-                    <li><a href="#">Lenovo</a></li>
+                    <li>iPhone</li>
+                    <li>Samsung</li>
+                    <li>Xiaomi</li>
+                    <li>Mac</li>
+                    <li>Dell</li>
+                    <li>Lenovo</li>
                 </ul>
             </li>
         </ul>
@@ -45,16 +49,15 @@
             <span class="whatsapp-text">Fale conosco</span>
         </a>
     </div>
-
     <div class="sidebar" [class.show]="isSidebarOpen">
         <div class="close-btn" (click)="closeSidebar()">
             <mat-icon>close</mat-icon>
         </div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Quem Somos</a></li>
-            <li><a href="#">Assistência Técnica</a></li>
-            <li><a href="#">Aparelhos</a></li>
+            <li><a (click)="scrollToSection('home'); closeSidebar()">Home</a></li>
+            <li><a (click)="scrollToSection('store'); closeSidebar()">Quem Somos</a></li>
+            <li><a (click)="scrollToSection('why'); closeSidebar()">Assistência Técnica</a></li>
+            <li><a (click)="scrollToSection('products'); closeSidebar()">Aparelhos</a></li>
         </ul>
     </div>
 </header>

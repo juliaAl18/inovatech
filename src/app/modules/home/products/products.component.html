@@ -1,77 +1,82 @@
-<div class="catalog">
-  <h1>Os mais pedidos</h1>
+<section id="products">
+  <div class="catalog">
+    <h1>Os mais pedidos</h1>
 
-  <div class="section">
-    <h2>Novos</h2>
-    <div class="aparelho-wrapper">
-      <div class="aparelho-container" #novosContainer>
-        <div class="aparelho-grid">
-          <div class="aparelho" *ngFor="let aparelho of getAparelhosByCategoria('Novos')"
-            (mouseenter)="onMouseEnter(aparelho)" (mouseleave)="onMouseLeave(aparelho)">
-            <div class="image-container">
-              <a [href]="generateWhatsAppLink(aparelho)" target="_blank">
-                <img [id]="'image-' + aparelho.id" [src]="aparelho.imagens[0]" alt="{{ aparelho.nome }}" />
-              </a>
-            </div>
-            <div class="info">
-              <p class="name">{{ aparelho.nome }}</p>
-              <p class="value-container">
-                <span class="value">R$ {{ aparelho.valor | number: '1.2-2' }}</span>
-              </p>
-              <div class="more-info">
-                <a [href]="generateWhatsAppLink(aparelho)" target="_blank">Mais informações</a>
+    <div class="section">
+      <h2>Novos</h2>
+      <div class="aparelho-wrapper">
+        <div class="aparelho-container" #novosContainer>
+          <div class="aparelho-grid">
+            <div class="aparelho" *ngFor="let aparelho of getAparelhosByCategoria('Novos')"
+              (mouseenter)="onMouseEnter(aparelho)" (mouseleave)="onMouseLeave(aparelho)">
+              <div class="image-container">
+                <a [href]="generateWhatsAppLink(aparelho)" target="_blank">
+                  <img [id]="'image-' + aparelho.id" [src]="aparelho.imagens[0]" alt="{{ aparelho.nome }}" />
+                </a>
               </div>
-              <div class="color-circles">
-                <div *ngFor="let cor of aparelho.cores" [ngStyle]="{'background-color': cor}" class="color-circle">
+              <div class="info">
+                <p class="name">{{ aparelho.nome }}</p>
+                <p class="value-container">
+                  <span class="value">R$ {{ aparelho.valor | number: '1.2-2' }}</span>
+                </p>
+                <div class="more-info">
+                  <a [href]="generateWhatsAppLink(aparelho)" target="_blank">Mais informações</a>
+                </div>
+                <div class="color-circles">
+                  <div *ngFor="let cor of aparelho.cores" [ngStyle]="{'background-color': cor}" class="color-circle">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="buttons">
-        <button *ngIf="needButtonInNovosContainer()" class="arrow" (click)="moveLeft('novos')"> <mat-icon>arrow_back_ios</mat-icon></button>
-        <button *ngIf="needButtonInNovosContainer()" class="arrow" (click)="moveRight('novos')"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <div class="buttons">
+          <button *ngIf="needButtonInNovosContainer()" class="arrow" (click)="moveLeft('novos')">
+            <mat-icon>arrow_back_ios</mat-icon></button>
+          <button *ngIf="needButtonInNovosContainer()" class="arrow"
+            (click)="moveRight('novos')"><mat-icon>arrow_forward_ios</mat-icon></button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Semi-novos</h2>
-    <div class="aparelho-wrapper">
-      <div class="aparelho-container" #semiNovosContainer>
-        <div class="aparelho-grid">
-          <div class="aparelho" *ngFor="let aparelho of getAparelhosByCategoria('Semi-novos')"
-            (mouseenter)="onMouseEnter(aparelho)" (mouseleave)="onMouseLeave(aparelho)">
-            <div class="image-container">
-              <a [href]="generateWhatsAppLink(aparelho)" target="_blank">
-                <img [id]="'image-' + aparelho.id" [src]="aparelho.imagens[0]" alt="{{ aparelho.nome }}" />
-              </a>
-            </div>
-            <div class="info">
-              <p class="name">{{ aparelho.nome }}</p>
-              <p class="value-container">
-                <span class="value">R$ {{ aparelho.valor | number: '1.2-2' }}</span>
-              </p>
-              <div class="more-info">
-                <a [href]="generateWhatsAppLink(aparelho)" target="_blank">Mais informações</a>
+    <div class="section">
+      <h2>Semi-novos</h2>
+      <div class="aparelho-wrapper">
+        <div class="aparelho-container" #semiNovosContainer>
+          <div class="aparelho-grid">
+            <div class="aparelho" *ngFor="let aparelho of getAparelhosByCategoria('Semi-novos')"
+              (mouseenter)="onMouseEnter(aparelho)" (mouseleave)="onMouseLeave(aparelho)">
+              <div class="image-container">
+                <a [href]="generateWhatsAppLink(aparelho)" target="_blank">
+                  <img [id]="'image-' + aparelho.id" [src]="aparelho.imagens[0]" alt="{{ aparelho.nome }}" />
+                </a>
               </div>
-              <div class="color-circles">
-                <div *ngFor="let cor of aparelho.cores" [ngStyle]="{'background-color': cor}" class="color-circle">
+              <div class="info">
+                <p class="name">{{ aparelho.nome }}</p>
+                <p class="value-container">
+                  <span class="value">R$ {{ aparelho.valor | number: '1.2-2' }}</span>
+                </p>
+                <div class="more-info">
+                  <a [href]="generateWhatsAppLink(aparelho)" target="_blank">Mais informações</a>
+                </div>
+                <div class="color-circles">
+                  <div *ngFor="let cor of aparelho.cores" [ngStyle]="{'background-color': cor}" class="color-circle">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="buttons">
-        <button *ngIf="needButtonInSemiNovosContainer()" class="arrow" (click)="moveLeft('semi-novos')"> <mat-icon>arrow_back_ios</mat-icon></button>
-        <button *ngIf="needButtonInSemiNovosContainer()" class="arrow" (click)="moveRight('semi-novos')"><mat-icon>arrow_forward_ios</mat-icon></button>
+        <div class="buttons">
+          <button *ngIf="needButtonInSemiNovosContainer()" class="arrow" (click)="moveLeft('semi-novos')">
+            <mat-icon>arrow_back_ios</mat-icon></button>
+          <button *ngIf="needButtonInSemiNovosContainer()" class="arrow"
+            (click)="moveRight('semi-novos')"><mat-icon>arrow_forward_ios</mat-icon></button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- <div class="section">
+    <!-- <div class="section">
     <h2>Notebook</h2>
     <div class="aparelho-wrapper">
       <div class="aparelho-container" #notebookContainer>
@@ -105,4 +110,5 @@
       </div>
     </div>
   </div> -->
-</div>
+  </div>
+</section>

@@ -14,11 +14,12 @@
 
   h1 {
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     font-family: "Pathway Gothic One", sans-serif;
 
     span {
-      color: #2BF1EF;
+      color: #010101;
+      font-weight: bold;
     }
   }
 }
@@ -74,7 +75,7 @@
 
   p {
     font-family: "Pathway Gothic One", sans-serif;
-    font-size: 22px;
+    font-size: 26px;
   }
 
   &:hover {

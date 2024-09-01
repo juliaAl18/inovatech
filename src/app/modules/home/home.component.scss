@@ -38,12 +38,13 @@
 .carousel-text h2 {
   margin: -120px 0 0;
   font-size: 35px;
-  font-family: "Rubik Bubbles", system-ui;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 .centered-text {
   text-align: center;
-  font-family: "Questrial", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   margin-top: 40px;
 }
@@ -62,6 +63,8 @@
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .whatsapp-link {
@@ -69,7 +72,7 @@
   align-items: center;
   background: #25d366;
   color: #131313;
-  padding: 12px 120px;
+  padding: 12px 40px;
   border-radius: 30px;
   text-decoration: none;
   font-size: 20px;

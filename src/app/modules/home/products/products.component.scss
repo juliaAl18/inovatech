@@ -4,8 +4,8 @@
   margin-top: 30px;
 
   h1 {
-    font-family: "Pathway Gothic One", sans-serif;
-    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
     text-align: center;
   }
 }
@@ -14,8 +14,8 @@
   margin-bottom: 20px;
 
   h2 {
-    font-family: "Pathway Gothic One", sans-serif;
-    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
     color: #2bf1ef;
     text-align: center;
   }
@@ -58,6 +58,7 @@
 .aparelho-grid {
   display: flex;
   transition: transform 0.3s ease;
+  font-family: "Montserrat", sans-serif;
 }
 
 .aparelho {
@@ -98,6 +99,7 @@
 
 .info {
   padding: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .color-circles {
@@ -116,12 +118,10 @@
 
 .more-info {
   a {
-    color: #000000;
+    color: #262323;
     text-decoration: none;
-
-    &:hover {
-      color: #2bf1ef;
-    }
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
   }
 }
 
@@ -151,4 +151,26 @@
   .aparelho {
     width: 310px;
   }
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25d366;
+  padding: 6px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }

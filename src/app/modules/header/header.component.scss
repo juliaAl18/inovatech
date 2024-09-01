@@ -18,7 +18,7 @@
 
 .nav {
   flex-grow: 1;
-  font-family: "Pathway Gothic One", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav ul {
@@ -28,7 +28,7 @@
   margin: 0;
   justify-content: center;
   color: white;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .nav .menu-item {
@@ -158,7 +158,7 @@
 }
 
 .sidebar ul li a {
-  font-family: "Pathway Gothic One", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 25px !important;
   text-decoration: none;
   color: white;
@@ -211,23 +211,43 @@
 @media (max-width: 768px) {
   .nav ul {
     display: none;
-    font-family: "Pathway Gothic One", sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 
   .menu-toggle {
     display: block;
   }
 
+  .whatsapp-text {
+    display: none;
+  }
+
   .whatsapp-button {
-    padding: 8px 20px;
+    padding: 10px 8px;
     font-size: 16px;
     border-radius: 25px;
+  }
+
+  .whatsapp-icon {
+    margin-right: 0;
+    height: 30px;
   }
 }
 
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .whatsapp-button {
+  .whatsapp-text {
     display: none;
+  }
+
+  .whatsapp-button {
+    padding: 10px 8px;
+    font-size: 16px;
+    border-radius: 25px;
+  }
+
+  .whatsapp-icon {
+    margin-right: 0;
+    height: 30px;
   }
 }

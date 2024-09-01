@@ -20,7 +20,10 @@
                   <span class="value">R$ {{ aparelho.valor | number: '1.2-2' }}</span>
                 </p>
                 <div class="more-info">
-                  <a [href]="generateWhatsAppLink(aparelho)" target="_blank">Mais informações</a>
+                  <a [href]="generateWhatsAppLink(aparelho)" target="_blank" class="whatsapp-button">
+                    <img src="assets/icone-whats.png" alt="WhatsApp Icon" class="whatsapp-icon">
+                    WhatsApp
+                  </a>
                 </div>
                 <div class="color-circles">
                   <div *ngFor="let cor of aparelho.cores" [ngStyle]="{'background-color': cor}" class="color-circle">
@@ -57,7 +60,10 @@
                   <span class="value">R$ {{ aparelho.valor | number: '1.2-2' }}</span>
                 </p>
                 <div class="more-info">
-                  <a [href]="generateWhatsAppLink(aparelho)" target="_blank">Mais informações</a>
+                  <a [href]="generateWhatsAppLink(aparelho)" target="_blank" class="whatsapp-button">
+                    <img src="assets/icone-whats.png" alt="WhatsApp Icon" class="whatsapp-icon">
+                    WhatsApp
+                  </a>
                 </div>
                 <div class="color-circles">
                   <div *ngFor="let cor of aparelho.cores" [ngStyle]="{'background-color': cor}" class="color-circle">

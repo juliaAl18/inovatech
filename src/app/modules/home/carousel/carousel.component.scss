@@ -77,3 +77,13 @@
     height: 30px;
   }
 }
+
+@media (max-width: 320px) {
+  .carousel-item {
+    padding: 0 10px;
+  }
+
+  .carousel-item img {
+    height: 15px;
+  }
+}

@@ -1,13 +1,13 @@
 .carousel-container {
   width: 100%;
-  // overflow: hidden;
+  overflow: hidden;
   position: relative;
   padding: 15px 0 15px 0;
 }
 
 .carousel {
   display: flex;
-  width: calc(100% * 2);
+  width: 100%;
   overflow: hidden;
 }
 
@@ -25,9 +25,8 @@
 
 .carousel-item img {
   display: block;
-  width: 100%; 
-  height: auto; 
-  max-height: 70px; 
+  width: 100%;
+  height: 70px;
 }
 
 @keyframes scroll {

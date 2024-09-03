@@ -42,13 +42,14 @@
 
 @media (max-width: 768px) {
   .carousel {
-    height: 35vh;
+    height: 25vh;
   }
 }
 
 @media (max-width: 576px) {
   .carousel {
-    height: 21.8vh;
+    height: 18vh;
+    margin-top: 10px;
   }
 
   .carousel-image {
@@ -59,9 +60,11 @@
 
 @media (max-width: 320px) {
   .carousel {
-    height: 18vh;
+    height: 10vh;
+    margin-top: 15px;
   }
 }
+
 
 .whats-icon {
   position: fixed;
